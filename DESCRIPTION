@@ -1,0 +1,42 @@
+Package: apch
+Type: Package
+Title: Adaptive Partial Conjunction Hypotheses Model
+Version: 0.1.0
+Authors@R: c(
+  person("Yuxin", "Li", email = "you@example.com", role = c("aut","cre")),
+  person("Zicheng", "Lu", role = "aut"),
+  person("Xiaolei", "Lin", role = "aut")
+ )
+Description: Two-layer hierarchical framework for multi-trait (or multi-feature)
+  association analysis with adaptive shrinkage at the feature level and
+  block-diagonal EM at the configuration level. Supports correlated features,
+  grid distillation, and parallel execution.
+License: GPL-3
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.3
+Depends:
+  R (>= 4.0)
+Imports:
+  Rcpp,
+  RcppEigen,
+  RcppParallel,
+  ashr,
+  mixsqp,
+  sn,
+  igraph,
+  future,
+  future.apply,
+  RhpcBLASctl,
+  stats,
+  utils
+LinkingTo:
+  Rcpp,
+  RcppEigen,
+  RcppParallel
+SystemRequirements: C++17
+Suggests:
+  knitr,
+  rmarkdown
+VignetteBuilder: knitr
+
