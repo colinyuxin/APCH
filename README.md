@@ -6,7 +6,7 @@ APCH is an R package implementing the **Adaptive Partial Conjunction Hypothesis 
 - multi-tissue / multi-omic association studies,
 - other settings with many “effect units” (SNPs, genes, loci) measured across multiple features (traits, tissues, omics).
 
-For each effect unit, APCH learns a flexible empirical-Bayes model for the effect size distribution, accounts for correlation in estimation errors across features, and then searches over feature subsets to find  one maximally informative jointly non-null subset while controlling the false discovery rate (FDR)**.
+For each effect unit, APCH learns a flexible empirical-Bayes model for the effect size distribution, accounts for correlation in estimation errors across features, and then searches over feature subsets to find  one maximally informative jointly non-null subset while controlling the false discovery rate (FDR).
 
 ---
 
