@@ -1,17 +1,20 @@
 Package: apch
 Type: Package
-Title: Adaptive Partial Conjunction Hypotheses Model
+Title: Adaptive Partial Conjunction Hypothesis for Subset-Level Inference
 Version: 0.1.0
 Authors@R: c(
-  person("Yuxin", "Li", email = "you@example.com", role = c("aut","cre")),
+  person("Yuxin", "Li", email = "yuxin.li.gr@dartmouth.edu", role = c("aut", "cre")),
   person("Zicheng", "Lu", role = "aut"),
-  person("Xiaolei", "Lin", role = "aut")
+  person("Xiaolei", "Lin", email = "xiaoleilin@fudan.edu.cn", role = "aut")
  )
-Description: Two-layer hierarchical framework for multi-trait (or multi-feature)
-  association analysis with adaptive shrinkage at the feature level and
-  block-diagonal EM at the configuration level. Supports correlated features,
-  grid distillation, and parallel execution.
-License: GPL-3
+Description: Empirical Bayes inference for partial conjunction hypotheses
+  across multiple features, such as traits or tissues. Each feature's
+  effect-size distribution is modeled with an adaptive shrinkage prior, and
+  the joint model learns how effect sizes are shared among jointly affected
+  features. Reports subset-level local false discovery rates and local false
+  sign rates with level-by-level subset selection, and allows correlated
+  estimation errors across features.
+License: GPL (>= 3)
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.3.3
@@ -19,24 +22,24 @@ Depends:
   R (>= 4.0)
 Imports:
   Rcpp,
-  RcppEigen,
   RcppParallel,
-  ashr,
-  mixsqp,
-  sn,
-  igraph,
   future,
   future.apply,
+  igraph,
+  mvtnorm,
+  pbivnorm,
   RhpcBLASctl,
   stats,
   utils
 LinkingTo:
   Rcpp,
+  RcppArmadillo,
   RcppEigen,
   RcppParallel
-SystemRequirements: C++17
+SystemRequirements: C++17, GNU make
 Suggests:
   knitr,
-  rmarkdown
+  rmarkdown,
+  testthat (>= 3.0.0)
 VignetteBuilder: knitr
-
+Config/testthat/edition: 3

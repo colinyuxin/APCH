@@ -3,33 +3,34 @@
 \docType{package}
 \name{apch-package}
 \alias{apch-package}
-\title{apch: Adaptive Partial Conjunction Hypotheses Model}
+\title{apch: Adaptive Partial Conjunction Hypothesis for Subset-Level Inference}
 \description{
-Two-layer hierarchical framework for multi-trait (or multi-feature) association analysis with adaptive shrinkage at the feature level and block-diagonal EM at the configuration level. Supports correlated features, grid distillation, and parallel execution.
+Empirical Bayes inference for partial conjunction hypotheses across multiple features, such as traits or tissues. Each feature's effect-size distribution is modeled with an adaptive shrinkage prior, and the joint model learns how effect sizes are shared among jointly affected features. Reports subset-level local false discovery rates and local false sign rates with level-by-level subset selection, and allows correlated estimation errors across features.
 }
 \section{Main features}{
 
 \itemize{
-\item Fast log-likelihood computation with parallel processing (RcppParallel)
-\item Hierarchical posterior inference via EM-style algorithms
-\item Adaptive shrinkage and correlation modeling
-\item Integration with ashr and future for distributed computation
+\item Subset-level local false discovery rates and local false sign rates
+\item Adaptive shrinkage priors for each feature's effect sizes
+\item Configuration-specific sharing of effect sizes across features
+\item Correlated estimation errors across features
 }
 }
 
 \section{C++ integration}{
 
-C++ code is used for computationally intensive matrix operations,
-using Eigen for linear algebra and RcppParallel for multi-threading.
+C++ code is used for computationally intensive likelihood evaluations,
+with RcppParallel for multi-threading.
 }
 
 \author{
-\strong{Maintainer}: Yuxin Li \email{you@example.com}
+\strong{Maintainer}: Yuxin Li \email{yuxin.li.gr@dartmouth.edu}
 
 Authors:
 \itemize{
   \item Zicheng Lu
-  \item Xiaolei Lin
+  \item Xiaolei Lin \email{xiaoleilin@fudan.edu.cn}
 }
 
 }
+\keyword{internal}

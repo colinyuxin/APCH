@@ -1,19 +1,20 @@
 #' @section Main features:
-#' - Fast log-likelihood computation with parallel processing (RcppParallel)
-#' - Hierarchical posterior inference via EM-style algorithms
-#' - Adaptive shrinkage and correlation modeling
-#' - Integration with ashr and future for distributed computation
+#' - Subset-level local false discovery rates and local false sign rates
+#' - Adaptive shrinkage priors for each feature's effect sizes
+#' - Configuration-specific sharing of effect sizes across features
+#' - Correlated estimation errors across features
 #'
 #' @section C++ integration:
-#' C++ code is used for computationally intensive matrix operations,
-#' using Eigen for linear algebra and RcppParallel for multi-threading.
+#' C++ code is used for computationally intensive likelihood evaluations,
+#' with RcppParallel for multi-threading.
 #'
-#' @docType package
+#' @keywords internal
 #' @name apch-package
 #' @useDynLib apch, .registration = TRUE
 #' @importFrom Rcpp sourceCpp
-#' @importFrom RcppEigen fastLm
 #' @importFrom RcppParallel RcppParallelLibs
-#' @importFrom stats dnorm pnorm median
-#' @importFrom utils tail
+#' @importFrom stats dnorm pnorm median setNames
+#' @importFrom utils tail modifyList
+#' @importFrom mvtnorm pmvnorm
+#' @importFrom pbivnorm pbivnorm
 "_PACKAGE"

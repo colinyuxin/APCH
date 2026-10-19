@@ -1,4 +1,9 @@
-^package\.Rproj$
+^.*\.Rproj$
 ^\.Rproj\.user$
 ^doc$
 ^Meta$
+^README\.md$
+^LICENSE\.md$
+^\.git$
+^\.gitignore$
+^\.gitattributes$
