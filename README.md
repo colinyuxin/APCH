@@ -70,7 +70,7 @@ a fit can be reused without refitting.
 | --- | --- |
 | `apch()` | Full analysis: marginal fit, joint fit, subset selection |
 | `apch_marginal()` | Adaptive shrinkage fit for each feature |
-| `apch_joint()` | Joint prior across features (APCH-s by default) |
+| `apch_joint()` | Joint prior across features |
 | `apch_lfdr()`, `apch_lfsr()` | Subset-level lfdr and lfsr for any subsets |
 | `apch_select()` | Level-by-level selection by lfsr or lfdr at a given level |
 
@@ -83,11 +83,6 @@ vignette("apch-intro", package = "apch")
 
 APCH models all 2^p null/non-null configurations, so it is meant for a
 moderate number of features (up to about 8).
-
-## Citation
-
-Li Y, Lu Z, Lin X. Adaptive Partial Conjunction Hypothesis: Identifying
-Pleiotropy Across Heterogeneous Effect Units.
 
 ## License
 
