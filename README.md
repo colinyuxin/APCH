@@ -1,5 +1,7 @@
 # APCH
 
+[![R-CMD-check](https://github.com/colinyuxin/APCH/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/colinyuxin/APCH/actions/workflows/R-CMD-check.yaml)
+
 **Adaptive Partial Conjunction Hypothesis**: which features does each effect act on jointly?
 
 Given effect estimates for many units (SNPs, genes) across several features
